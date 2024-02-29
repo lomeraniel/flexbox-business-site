@@ -1,11 +1,18 @@
 /* Universal Styles */
 html {
+    box-sizing: border-box;
     font-family: "Lexend Mega", sans-serif;
     font-size: 22px;
     background-color: white;
     color: black;
     text-align: center;
-  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 
 body {
     margin: 0;
