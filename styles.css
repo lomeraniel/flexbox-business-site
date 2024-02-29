@@ -1,0 +1,281 @@
+/* Universal Styles */
+html {
+    font-family: "Lexend Mega", sans-serif;
+    font-size: 22px;
+    background-color: white;
+    color: black;
+    text-align: center;
+  }
+
+body {
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.container {
+    display: flex;
+}
+
+main {
+    display: flex;
+    flex-flow: column;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.main-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-menu li {
+    margin-right: 5rem;
+}
+
+.main-menu a {
+    color: black;
+    text-decoration: underline;
+}
+
+.main-menu a:hover {
+    text-decoration: none;
+}
+
+/* Banner */
+
+#banner {
+    flex-flow: column;
+    justify-content: center;
+    height: 30rem;
+    background-image: url('https://content.codecademy.com/PRO/independent-practice-projects/flexbox-business-site/img/skyscrapers.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.motto {
+    background-color: white;
+}
+
+/* Portfolio */
+
+#portfolio {
+    flex-flow: column;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gallery-item {
+    display: flex;
+    width: 45%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image-container {
+    width: 40%;
+    overflow: hidden;
+  }
+  
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    padding: 0.5rem;
+  }
+
+.caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    padding: 0.5em;
+}
+
+@media only screen and (max-width: 960px) {
+    .gallery {
+        display: flex;
+        flex-flow: column;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .gallery-item {
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .gallery {
+        display: flex;
+        flex-flow: column;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+
+    .gallery-item {
+        display: flex;
+        flex-flow: column;
+        width: 80%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .image-container {
+        width: 80%;
+        overflow: hidden;
+      }
+}
+
+/* Team */
+
+#team {
+    display: flex;
+    flex-flow: column;
+}
+
+.team-gallery {
+    background-image: url('https://content.codecademy.com/PRO/independent-practice-projects/flexbox-business-site/img/blurred-road.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 1200%;
+    height: 30rem;
+    display: flex;
+    position: relative; /* Position it relative to add the overlay */
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.team-gallery::before {
+    content: ""; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely relative to the .team-gallery */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* White color with 0.5 opacity */
+}
+
+.team-gallery-item {
+    z-index: 5;
+}
+
+.team-gallery-item {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    width: 25%;
+    color: white;
+}
+
+.team-image-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+.team-image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    padding: 0.5rem;
+  }
+
+.team-name,
+.team-position {
+    margin-top: -1rem; /* Adjust the spacing between name and position */
+    margin-bottom: 0; /* Adjust the spacing between name and position */
+}
+
+@media only screen and (max-width: 960px ) {
+    .team-gallery-item {
+        width: 35%;
+    }
+
+    .team-gallery {
+        height: 50rem;
+        display: flex;
+        position: relative; /* Position it relative to add the overlay */
+        justify-content: space-around;
+        align-items: flex-start;
+        padding-top: 1rem;
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 490px ) {
+    .team-gallery-item {
+        width: 80%;
+    }
+
+    .team-gallery {
+        height: 70rem;
+        display: flex;
+        position: relative; /* Position it relative to add the overlay */
+        justify-content: space-around;
+        align-items: flex-start;
+        padding-top: 1rem;
+        flex-wrap: wrap;
+    }
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-flow: column;
+    font-size: 0.75rem;
+}
+
+#contact {
+    display: flex;
+    flex-flow: column;
+    margin-top: -1rem;
+}
+
+.section-subtitle {
+    margin-top: -1rem;
+    margin-bottom: 0rem;
+}
+
+#copyright {
+    display: flex;   
+    width: 100%; 
+    justify-content: center;
+    margin-top: 2rem;
+}
